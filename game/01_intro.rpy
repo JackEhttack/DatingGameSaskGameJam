@@ -30,7 +30,7 @@ label intro:
 
     hide failed paper
 
-    pause
+    pause 1
 
     play music "music/make_it_count.wav"
     scene outside
@@ -55,7 +55,7 @@ label intro:
     "{p=2}..."
 
     show kate_placeholder at offscreenleft
-    with walk_by
+    with MoveTransition(2)
     "???" "Yeah! Die stupid paper!!" 
 
     "{i}Huh...{/i}"
@@ -77,17 +77,19 @@ label intro:
     "Uh-huh."
     show commodore_placeholder at offscreenright
     with move
-    "{i}Ugh...{/i}"
+    "{i}Ugh... 'invited' my ass.{/i}"
     show commodore_placeholder at right
     with move
-    "???" ""
-
-
+    "???" "Forgot to mention. My name is Commadore, Professor Commadore."
     "{i}There is no way blud is a professor.{/i}"
+    "Oh, mine's We-{p=1}{nw}"
+    show v_placeholder at left, flip
+    with moveinleft
+    "{i}He's already wandered off to talk to another student. Presumably voluntelling them to join his study sessions.{/i}"
 
     scene black
     with fade
 
-    pause
+    pause 1
 
     jump day1

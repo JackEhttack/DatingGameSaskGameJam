@@ -17,6 +17,6 @@ label day1:
     scene black
     with fade
 
-    pause
+    pause 1
 
     jump day2

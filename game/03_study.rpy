@@ -11,12 +11,12 @@ label day2:
     with fade
 
     # round table dialogue
-    
+
     call study
     
     scene black
     with fade
 
-    pause
+    pause 1
 
     jump day3

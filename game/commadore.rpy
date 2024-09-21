@@ -12,17 +12,17 @@ label commadore:
 
     if c_score == 1:
         c "If you insist."
-        $ c_score = 1
+        $ c_score = 2
         return
 
     if c_score == 2:
         c "Not implemented."
-        $ c_score = 2
+        $ c_score = 3
         return
 
     if c_score == 3:
         c "Not implemented."
-        $ c_score = 3
+        $ c_score = 4
         return
 
 label commadore_ending:
