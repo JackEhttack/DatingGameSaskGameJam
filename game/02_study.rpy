@@ -12,4 +12,16 @@ label day1:
 
     "The study room. Day1."
 
+    menu:
+        "Who should I study with first?"
+
+        "Study with Proffesor Commodore":
+            "I'll be back to this line"
+
+        "Study with Desmond":
+            "I'll be back to this line"
+
+        "Study with ":
+            "I'll be back to this line"            
+
     jump day2
