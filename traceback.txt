@@ -1,36 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 40, in script call
+  File "game/script.rpy", line 38, in script call
     call intro
-  File "game/01_intro.rpy", line 86, in script
-    show v_placeholder at left, flip
-  File "game/01_intro.rpy", line 86, in <module>
-    show v_placeholder at left, flip
-NameError: name 'flip' is not defined
+  File "game/05_ending.rpy", line 105, in script
+    if v_score + c_score + d_score + k_score <= 0:
+  File "game/05_ending.rpy", line 105, in <module>
+    if v_score + c_score + d_score + k_score <= 0:
+NameError: name 'v_score' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 40, in script call
+  File "game/script.rpy", line 38, in script call
     call intro
-  File "game/01_intro.rpy", line 86, in script
-    show v_placeholder at left, flip
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1111, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1209, in py_eval
+  File "game/05_ending.rpy", line 105, in script
+    if v_score + c_score + d_score + k_score <= 0:
+  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1202, in py_eval_bytecode
+  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/01_intro.rpy", line 86, in <module>
-    show v_placeholder at left, flip
-NameError: name 'flip' is not defined
+  File "game/05_ending.rpy", line 105, in <module>
+    if v_score + c_score + d_score + k_score <= 0:
+NameError: name 'v_score' is not defined
 
-Windows-10-10.0.19045 AMD64
+Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
-Sat Sep 21 15:42:59 2024
+Sat Sep 21 16:07:09 2024
