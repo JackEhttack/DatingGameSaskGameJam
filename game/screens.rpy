@@ -563,7 +563,21 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _(
+                """
+This is a game made in 48 hours for the Sask. Game Jam, the theme being 'making it count'.
+
+Our team:
+    Hannah: (character artist, came up with idea)
+    Paige: (character artist)
+    Jack: (lead programmer)
+    Bryce: (programmer)
+    Noah: (composer) 
+    Alex: (emotional support)
+
+Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].
+
+[renpy.license!t]""")
 
 
 style about_label is gui_label

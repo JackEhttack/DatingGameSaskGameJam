@@ -14,6 +14,11 @@ image study = "images/study_room.jpg"
 
 image failed paper = "images/sprites/failed_paper.png"
 
+transform offscreenbottom:
+    yalign -2.0
+
+define walk_by = MoveTransition(2)
+
 # The game starts here.
 
 label start:
@@ -24,4 +29,3 @@ label start:
     # with transition
 
     jump intro
-
