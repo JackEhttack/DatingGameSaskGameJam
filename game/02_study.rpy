@@ -18,4 +18,21 @@ label day1:
 
     pause
 
+    menu:
+        "Who should I study with first?"
+
+        "Study with Proffesor Commodore":
+            "I'll be back to this line"
+
+        "Study with Desmond":
+            "I'll be back to this line"
+
+        "Study with ":
+            "I'll be back to this line"         
+
+    scene black
+    with fade
+
+    pause   
+
     jump day2
