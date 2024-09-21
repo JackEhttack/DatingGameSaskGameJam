@@ -6,9 +6,12 @@ label kate:
 
     if k_score == 0:
         show kate_placeholder at center
-        k "What do you want dweeb?"
-        "Ummm, my name is WC. What's your's?"
-        k "Like I'd tell you dweeb"
+        k "{b}Why can't I just play football instead{/b}"
+        "{i}Huh, she sounds like she is struggling.{/i}"
+        "{i}Maybe I can help?{/i}"
+        "Hey, do you need any help at all"
+        k "Really? I would really appreciate it dweeb"
+        
         $ k_score = 1
         return
 

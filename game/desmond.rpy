@@ -13,6 +13,9 @@ label desmond:
         "Then why are you here?"
         d "You think I'm here to improve my grade?"
         d "HAHAHAHAHA!!"
+        d "You're all just simple barbarians and morons compared to me"
+        d "You know what just for the hell of it I guess I'll help you."
+        d "What do you need help with"
         
 
         $ d_score = 1
