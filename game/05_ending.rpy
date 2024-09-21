@@ -63,6 +63,17 @@ label ending:
         with moveinbottom
         "{i}Easy peasy.{/i}"
 
+    "{i}The rest of the students in the exam hall file out through the exits.{/i}"
+
+    if v_score + c_score + d_score + k_score <= 0:
+        "{i}You scantly recognize any faces.{/i}"
+
+    scene black
+    with fade
+    pause 1.0
+    scene outside
+    with fade
+
     jump ending_decider
 
 label ending_decider:
@@ -94,13 +105,6 @@ label ending_decider:
     jump worst_end
 
 label worst_end:
-    "{i}The rest of the students in the exam hall file out through the exits.{/i}"
-    "{i}You scantly recognize any faces.{/i}"
-    scene black
-    with fade
-    pause
-    scene outside
-    with fade
 
     if v_score + c_score + d_score + k_score <= 0:
         "{i}With your head held low you stumble back towards your dorm room.{/i}"
