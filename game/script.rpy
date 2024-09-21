@@ -3,8 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
+define v = Character("V")
+define k = Character("Kate")
+define d = Character("Desmond")
+define c = Character("Professor Commadore")
 
 # The game starts here.
 
@@ -14,19 +16,23 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    # scene bg room
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    # show eileen happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    play sound "sfx/intro_footsteps.wav"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "{p=4}{cps=*0.2}You walk to the front of the lecture hall to grab your paper...{/cps}"
+
+    # e "You've created a new Ren'Py game."
+
+    # "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
