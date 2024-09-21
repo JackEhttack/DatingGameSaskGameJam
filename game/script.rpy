@@ -3,6 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define v_score = 0
+define k_score = 0
+define d_score = 0
+define c_score = 0
+
 define v = Character("V")
 define k = Character("Kate")
 define d = Character("Desmond")

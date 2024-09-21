@@ -50,11 +50,11 @@ label intro:
 
     play sound "sfx/paper_ripping.wav"
 
-    show jock at offscreenright
+    show kate_placeholder at offscreenright
 
     "{p=2}..."
 
-    show jock at offscreenleft
+    show kate_placeholder at offscreenleft
     with walk_by
     "???" "Yeah! Die stupid paper!!" 
 
@@ -70,12 +70,18 @@ label intro:
     "Yes?"
     "???" "I have been informed that you did not pass the midterm."
     "Yeah..."
-    "???" "You are expected to attend the study sessions I host on Wednesdays."
-    "???" "They are on the first floor of the Amiga Library, 3pm sharp."
+    "???" "Well, you have been {i}invited{/i} to attend our {b}mandatory{/b} study sessions."
+    "???" "I host them every Wednesday, 3pm sharp on the first floor of the Amiga Library."
     "Right."
-    "???" "I better see you there."
+    "???" "I expect to see you there."
     "Uh-huh."
-    
+    show commodore_placeholder at offscreenright
+    with move
+    "{i}Ugh...{/i}"
+    show commodore_placeholder at right
+    with move
+    "???" ""
+
 
     "{i}There is no way blud is a professor.{/i}"
 

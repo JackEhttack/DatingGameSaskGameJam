@@ -3,3 +3,4 @@
 game/saves/*
 game/cache/*
 log.txt
+errors.txt

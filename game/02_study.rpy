@@ -10,23 +10,13 @@ label day1:
     scene study
     with fade
 
-    "The study room. Day1."
+    # round table dialogue
 
-    menu:
-        "Who should I study with first?"
-
-        "Study with Proffesor Commodore":
-            "I'll be back to this line"
-
-        "Study with Desmond":
-            "I'll be back to this line"
-
-        "Study with ":
-            "I'll be back to this line"         
+    call study
 
     scene black
     with fade
 
-    pause   
+    pause
 
     jump day2
