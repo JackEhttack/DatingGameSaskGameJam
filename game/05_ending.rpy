@@ -111,6 +111,7 @@ label worst_end:
     play sound "sfx/ouchie.wav"
     "..."
     "You did not make it count.\n{p}Join us in the next game where our protagonist, Wet Cardboard, is reincarnated into a fantasy world void of their only weakness: math."
+    "Remember to look both ways before crossing the street kids!"
     return
 
 label best_end:
