@@ -5,6 +5,14 @@ label desmond:
     if d_score == 0:
         show desmond_placeholder at center
         d "Heh, come to witness my superior intellect?"
+        "Uhh no?"
+        "What's your name?"
+        d "My name is Desmond, the smartest person you'll ever meet"
+        "Then why are you here?"
+        d "You think I'm here to improve my grade?"
+        d "HAHAHAHAHA!!"
+        
+
         $ d_score = 1
         return
 

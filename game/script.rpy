@@ -3,11 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define v_score = 0
-define k_score = 0
-define d_score = 0
-define c_score = 0
-
 define v = Character("V")
 define k = Character("Kate")
 define d = Character("Desmond")
@@ -19,11 +14,6 @@ image study = "images/study_room.jpg"
 
 image failed paper = "images/sprites/failed_paper.png"
 
-transform offscreenbottom:
-    yalign -2.0
-
-define walk_by = MoveTransition(2)
-
 # The game starts here.
 
 label start:
@@ -34,3 +24,4 @@ label start:
     # with transition
 
     jump intro
+

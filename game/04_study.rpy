@@ -10,13 +10,5 @@ label day3:
     scene study
     with fade
 
-    # round table dialogue
-
-    call study
-
-    scene black
-    with fade
-
-    pause
-
+ 
     jump ending
