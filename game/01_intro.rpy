@@ -9,7 +9,7 @@ label intro:
 
     play sound "sfx/paper_noise.wav"
 
-    show failed paper at default
+    show failed paper at top
     with moveinbottom
 
     "{p=1}..."
@@ -18,12 +18,16 @@ label intro:
 
     "{cps=*0.2}...{/cps}"
 
-    show failed paper at center
+    show failed paper at default
+    with move
+
+    "{cps=*0.2}...{/cps}"
 
     "Okay now that's just bullshit."
 
-    ""
-    scene None
+    scene black
     with fade
+
+    pause
 
     jump day1

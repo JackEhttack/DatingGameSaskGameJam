@@ -12,4 +12,10 @@ label day1:
 
     "The study room. Day1."
 
+    
+    scene black
+    with fade
+
+    pause
+
     jump day2

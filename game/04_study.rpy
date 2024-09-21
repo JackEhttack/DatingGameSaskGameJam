@@ -12,4 +12,9 @@ label day3:
 
     "The study room. Day3."
 
+    scene black
+    with fade
+
+    pause
+
     jump ending
