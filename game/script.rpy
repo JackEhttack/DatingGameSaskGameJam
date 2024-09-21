@@ -8,6 +8,13 @@ define k = Character("Kate")
 define d = Character("Desmond")
 define c = Character("Professor Commadore")
 
+
+image hall = "images/lecture_hall.jpg"
+image outside = "images/outside_school.jpg"
+image study = "images/study_room.jpg"
+
+image failed paper = "images/sprites/failed_paper.png"
+
 # The game starts here.
 
 label start:
@@ -30,11 +37,21 @@ label start:
 
     "{p=4}{cps=*0.2}You walk to the front of the lecture hall to grab your paper...{/cps}"
 
-    play sound "sfx/"
+    scene hall
+    with fade
 
-    show sprites failed_paper
+    play sound "sfx/paper_noise.wav"
 
-    "{p=2}Shit..."
+    show failed paper
+    with moveinbottom
+
+    "{p=1}..."
+
+    "Shit."
+
+    "{cps=*0.2}...{/cps}"
+
+    ""
 
     # e "You've created a new Ren'Py game."
 
