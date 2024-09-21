@@ -30,6 +30,12 @@ label start:
 
     "{p=4}{cps=*0.2}You walk to the front of the lecture hall to grab your paper...{/cps}"
 
+    play sound "sfx/"
+
+    show sprites failed_paper
+
+    "{p=2}Shit..."
+
     # e "You've created a new Ren'Py game."
 
     # "Once you add a story, pictures, and music, you can release it to the world!"
