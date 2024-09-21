@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/01_intro.rpy", line 12, in script
+    show failed paper at bottom
+  File "game/01_intro.rpy", line 12, in <module>
+    show failed paper at bottom
+NameError: name 'bottom' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/01_intro.rpy", line 12, in script
+    show failed paper at bottom
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/01_intro.rpy", line 12, in <module>
+    show failed paper at bottom
+NameError: name 'bottom' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
+datingsim 1.0
+Sat Sep 21 10:39:37 2024

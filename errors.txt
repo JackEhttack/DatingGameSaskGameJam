@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 35: expected 'image_name_component' not found.
-    show "images/sprites/failed_paper.png"
-         ^
+File "game/minigame.rpy", line 1: expected statement.
+    minigame:
+            ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Sep 20 23:48:59 2024
+Sat Sep 21 10:46:50 2024
