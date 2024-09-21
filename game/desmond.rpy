@@ -1,4 +1,5 @@
 label desmond:
+    play music "sfx/desmond_theme.wav"
     "{i}You decide to study with Desmond.{/i}"
 
     if d_score == 0:

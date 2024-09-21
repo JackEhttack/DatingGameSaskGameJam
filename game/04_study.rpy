@@ -10,7 +10,9 @@ label day3:
     scene study
     with fade
 
-    "The study room. Day3."
+    # round table dialogue
+
+    call study
 
     scene black
     with fade
