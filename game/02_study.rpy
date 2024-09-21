@@ -4,16 +4,19 @@ label day1:
     with fade
 
     "Wowie, that was exceptionally boring.{p=1}Even more so than normal."
-    "Think we were talking about triganometry today?"
+    "Think we were talking about trigonometry today?"
     "Guess it's time to go to my mandatory study group."
 
     scene study
     with fade
 
+    # round table dialogue
+
+    call study
     
+    scene black
+    with fade
 
-
+    pause 1
 
     jump day2
-
-     
