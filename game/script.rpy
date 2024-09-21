@@ -14,6 +14,18 @@ image study = "images/study_room.jpg"
 
 image failed paper = "images/sprites/failed_paper.png"
 
+image blank final = "images/sprites/blank_final.png"
+image failed final = "images/sprites/failed_final.png"
+image ok final = "images/sprites/ok_final.png"
+image good final = "images/sprites/good_final.png"
+image best final = "images/sprites/best_final.png"
+
+transform offscreenbottom:
+    yalign -2.0
+
+transform flip:
+    xzoom -1
+
 # The game starts here.
 
 label start:
@@ -22,6 +34,5 @@ label start:
     # scene bg room
     # show eileen happy
     # with transition
-
-    jump intro
-
+    # jump ending
+    call intro
