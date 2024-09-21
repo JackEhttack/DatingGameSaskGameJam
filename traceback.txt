@@ -29,4 +29,4 @@ NameError: name 'v_score' is not defined
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
-Sat Sep 21 16:07:09 2024
+Sat Sep 21 17:06:45 2024
