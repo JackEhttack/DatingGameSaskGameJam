@@ -1,4 +1,7 @@
 label kate:
+
+    play music "music/kate_theme.wav"
+
     "{i}You decide to study with Kate.{/i}"
 
     if k_score == 0:
@@ -20,4 +23,7 @@ label kate:
         return
 
 label kate_ending:
-    k ""
+    k "You absolute IDIOT, did you really think you get to see MY ending????"
+    k "Those puny stupid DEVELOPERS forgot to put it in the GAME."
+    k "BWAHAHAHAHAHAHA."
+    return

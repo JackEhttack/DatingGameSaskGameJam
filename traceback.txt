@@ -1,36 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 40, in script call
+  File "game/script.rpy", line 49, in script call
     call intro
-  File "game/01_intro.rpy", line 86, in script
-    show v_placeholder at left, flip
-  File "game/01_intro.rpy", line 86, in <module>
-    show v_placeholder at left, flip
-NameError: name 'flip' is not defined
+  File "game/02_study.rpy", line 29, in script call
+    call study
+  File "game/study.rpy", line 18, in script call
+    call commadore
+  File "game/commadore.rpy", line 4, in script
+    if c_score == 0:
+  File "game/commadore.rpy", line 4, in <module>
+    if c_score == 0:
+NameError: name 'c_score' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 40, in script call
+  File "game/script.rpy", line 49, in script call
     call intro
-  File "game/01_intro.rpy", line 86, in script
-    show v_placeholder at left, flip
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1111, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1070, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "game/02_study.rpy", line 29, in script call
+    call study
+  File "game/study.rpy", line 18, in script call
+    call commadore
+  File "game/commadore.rpy", line 4, in script
+    if c_score == 0:
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
   File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1209, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/01_intro.rpy", line 86, in <module>
-    show v_placeholder at left, flip
-NameError: name 'flip' is not defined
+  File "game/commadore.rpy", line 4, in <module>
+    if c_score == 0:
+NameError: name 'c_score' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
-Sat Sep 21 15:42:59 2024
+Sat Sep 21 16:53:26 2024

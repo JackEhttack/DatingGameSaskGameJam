@@ -1,5 +1,5 @@
 label study:
-    play music "sfx/make_it_count.wav"
+    play music "music/make_it_count.wav"
 
     scene study
     menu:
@@ -20,5 +20,7 @@ label study:
     if c_score == -1:
         $ c_score = 1
         jump study
+
+    play music "music/make_it_count.wav"
 
     return

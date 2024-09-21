@@ -8,6 +8,11 @@ define k = Character("Kate")
 define d = Character("Desmond")
 define c = Character("Professor Commadore")
 
+define v_score = 0
+define k_score = 0
+define d_score = 0
+define c_score = 0
+
 image hall = "images/lecture_hall.jpg"
 image outside = "images/outside_school.jpg"
 image study = "images/study_room.jpg"
@@ -20,6 +25,22 @@ image ok final = "images/sprites/ok_final.png"
 image good final = "images/sprites/good_final.png"
 image best final = "images/sprites/best_final.png"
 
+transform veryleft:
+    xanchor 1
+    xpos 1
+
+transform middleleft:
+    xanchor 1
+    xpos 0.25
+
+transform middleright:
+    xanchor 1
+    xpos 0.5
+
+transform veryright:
+    xanchor 1
+    xpos 0.75
+
 transform offscreenbottom:
     yalign -2.0
 
@@ -30,9 +51,6 @@ transform flip:
 
 label start:
 
-    # c "hello!"
-    # scene bg room
-    # show eileen happy
-    # with transition
-    # jump ending
     call intro
+
+    # put a thank you for playing our game here
