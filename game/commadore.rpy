@@ -91,6 +91,42 @@ label commadore:
 
     if c_score == 2:
         c "You are very insistant with this arrangement"
+        "well.. confidence is key"
+        menu:
+        c "It would make my life easier if you weren't so confident."
+            "I should definitely try my pickup lines again":
+                c "."
+                c ".."
+                c "..."
+                menu:
+                    C "just get it out of your system."
+
+                    "Do you satisfy all the sentences of some formal theory? Because you look like a model.":
+                        c "I appreciate the compliment"
+                        c "Not the intent behind it."
+
+                    "Do you contain all of my limits? Because I think you complete me.":
+                        c "Get to studying"
+
+                    "Do you absorb multiplication from either side? Because I think you're ideal.":
+                        c "Ideally... you would be studying"
+
+                    "are you the non-trivial reduced local homology group of a manifold?":
+                        "Because I'd like you to be on top."
+                        c "I'm going to forget you said that."
+                        c "And there's no way you came up with that."
+
+                "worth a shot"
+                c "No."
+                c "No it was not."
+            
+            "Time to study hard":
+                c "Good plan"
+                #make math here
+                #afterwards math is called again >
+        #right here. this allows the player to do math after a pickup line
+        #and do double math for the other option.
+
         # funny coffee gag
         $ c_score = 3
         return
