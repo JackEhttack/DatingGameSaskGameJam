@@ -2,10 +2,10 @@ label kate:
 
     play music "music/kate_theme.wav"
 
-    "{i}You decide to study with Kate.{/i}"
-
     if k_score == 0:
         show kate_placeholder at center
+        "{i}You decide to study with Kate.{/i}"
+        
         k "{b}Why can't I just play football instead{/b}"
         "{i}Huh, she sounds like she is struggling.{/i}"
         "{i}Maybe I can help?{/i}"

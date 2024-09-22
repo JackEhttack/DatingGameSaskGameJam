@@ -109,7 +109,7 @@ label v_ending:
     v "Same I passed too"
     v "So, what are you doing after this?"
     "Oh, I was proabably going back to my dorm. What about you?"
-    v "Oh nothing, I was just wondering if you wanted to come back to my dorm and chill and listen to heavy metal"
+    v "Oh nothing, I was just wondering if you wanted to come back to my dorm and chill and listen to heavy metal?"
     "Yeah of course, let's go!"
 
     scene black
