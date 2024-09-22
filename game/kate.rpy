@@ -40,18 +40,21 @@ label kate:
         k "Oh hi it's you again!"
         "Hey, you need any help again?"
         k "Yes please!"
+        show kate disappointed
         k "If I don't pass the final exam I won't be able to participate in the big game afterwards."
         "No worries, let's get to it!"
 
 #You do the math minigame again and if you succeed her socre goes up and you get some dialogue else her score goes down
 
         $ k_score = 2
+        show kate kappy 
         k "Thanks so much, pointdexter"
         k "I'm starting to finally get it a little bit"
         "Well that's good."
         "Anything else I can help with?"
         k "Yeah actually!"
         "What is it?"
+        show normal
         k "Move. You're in my light."
         "{i}I guess some things don't change"
         return
@@ -71,7 +74,7 @@ label kate:
         $ k_score = 3
         k "We're going to slam this test"
         "Hopefully we do"
-        k "Hey remeber if we pass, we got our challenge!"
+        k "Hey remember if we pass, we got our challenge!"
         return
 
 label kate_ending:
@@ -81,5 +84,6 @@ label kate_ending:
     "Hey Kate, I passed! Did you?"
     k "I did, you know what that means?"
     "Yes I definitely do"
+    show kate happy
     k "Then I'll see you later on the field W.C"
     return
