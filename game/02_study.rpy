@@ -10,16 +10,16 @@ label day1:
     scene study
     with fade
 
-    show commodore_placeholder at default, veryright
+    show commodore normal at default, veryright
     with moveinright
 
-    show desmond_placeholder at default, middleright
+    show desmond normal at default, middleright
     with moveinright
 
-    show kate_placeholder at default, middleleft
+    show kate normal at default, middleleft
     with moveinleft
 
-    show v_placeholder at default, flip, veryleft
+    show v normal at default, flip, veryleft
     with moveinleft
 
     "{i}You arrive at the study room a few minutes later than you'd like, but it'll have to do.{/i}"

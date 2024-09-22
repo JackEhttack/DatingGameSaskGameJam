@@ -22,6 +22,8 @@ label desmond:
         d "What do you need help with?"
         
         #You proceed to do the math game with desmond and if you're right his score goes up else it goes down
+        call tutorial
+        call screen Minigame("Question", "Answer")
 
         $ d_score = 1
         d "Heh, not bad kid you did alright." #Just a neutral face
@@ -45,6 +47,7 @@ label desmond:
         d "Sure give it a shot."
         
         #You do the math minigame again
+        call screen Minigame("Question", "Answer")
         
         $ d_score = 2
         d "Wait what how did you solve that??"
@@ -61,7 +64,7 @@ label desmond:
         d "Hey W.C"
         "Hey Desmond are you ready for the final exam."
         d "Of couse I am."
-        "Hey desmond what's going on with your nails."
+        "Hey Desmond what's going on with your nails."
         "{i}He looks down at his nails then looks away.{/i}"
         d "Umm.. that was my sister she did them."
         d "She wanted to paint my nails last night, so I let her."

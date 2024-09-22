@@ -81,7 +81,7 @@ label ending_decider:
         jump best_end
 
     if c_score == 4:
-        jump commadore_ending
+        jump commodore_ending
 
     if v_score == 3:
         jump v_ending

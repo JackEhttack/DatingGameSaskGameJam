@@ -38,7 +38,7 @@ label intro:
 
     "{i}I can't believe it. It was only first year math right?{/i}"
     "{i}I tried to study, I really did.{/i}"
-    "{i}But as soon as I glanced the first variable my eyes felt heavy and shortly after sleep took over my body.{/i}"
+    "{i}But as soon as I glanced at the first variable my eyes felt heavy and shortly after sleep took over my body.{/i}"
 
     show failed paper at top
     with moveinbottom
@@ -50,18 +50,18 @@ label intro:
 
     play sound "sfx/paper_ripping.wav"
 
-    show kate_placeholder at offscreenright
+    show kate happy at offscreenright
 
     "{p=2}..."
 
-    show kate_placeholder at offscreenleft
+    show kate happy at offscreenleft
     with MoveTransition(2)
     "???" "Yeah! Die stupid paper!!" 
 
     "{i}Huh...{/i}"
     "{i}Guess I'll head back to the dorms.{/i}"
 
-    show commodore_placeholder at right
+    show commodore normal at right
     with moveinright 
 
     "{i}Before you appears a well dressed man with a... monitor for a head.{p=1}He doesn't appear to be much older than you.{/i}" 
@@ -75,15 +75,15 @@ label intro:
     "Right."
     "???" "I expect to see you there."
     "Uh-huh."
-    show commodore_placeholder at offscreenright
+    show commodore normal at offscreenright
     with move
     "{i}Ugh... 'invited' my ass.{/i}"
-    show commodore_placeholder at right
+    show commodore normal at right
     with move
-    "???" "Forgot to mention. My name is Commadore, Professor Commadore."
+    "???" "Forgot to mention. My name is commodore, Professor commodore."
     "{i}There is no way blud is a professor.{/i}"
     "Oh, mine's We-{p=1}{nw}"
-    show v_placeholder at left, flip
+    show v normal at left, flip
     with moveinleft
     "{i}He's already wandered off to talk to another student. Presumably voluntelling them to join his study sessions.{/i}"
 
