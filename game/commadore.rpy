@@ -44,20 +44,162 @@ label commadore:
 
             "Remain silent.":
                 "{i}You continue studying, letting that intrusive thought escape you.{/i}"
+                c "Is there something on my monitor?"
+                "Oh uh, sorry?"
+                c "You were staring at me."
+                c "And yes, I am a professor."
+                "{i}phew"
 
+        #mathtime
+        
+        menu:
+            "{i}what now?"
+            
+            "{i}I should flirt with him now":
+                menu:
+                    "{i}The time is now"
+
+                    "How about some multiplication between you and I?":
+                        c "subtract yourself from my presence"
+
+                    "I feel like we could manage some integration later.":
+                        c "what kind of integration?"
+                        "the type with undefined limits"
+                        c "No."
+
+                    "on a scale of 1-10 I'd rate you an 'i' because you're unreal":
+                        c "and I wish you were only imaginary"
+
+                    "Are you category theory? because I dont get you at all":
+                        c "Neither do I"
+                        c "Now do your math"
+
+                "{i}Worth a shot."
+
+            "{i}I should study.":
+                c "yes you should."
+                "did he just read my mind?"
+        
+        "time for study i guess."
+        
+        #mathtime
+        
         call screen pong
 
         $ c_score = 2
         return
 
     if c_score == 2:
-        c "Not implemented."
+        show commodore_placeholder
+        with moveinbottom
+        c "You are very insistant with this arrangement"
+        "well.. confidence is key"
+        menu:
+            c "It would make my life easier if you weren't so confident."
+            "I should definitely try my pickup lines again":
+                c "."
+                c ".."
+                c "..."
+                menu:
+                    c "just get it out of your system."
+
+                    "Do you satisfy all the sentences of some formal theory? Because you look like a model.":
+                        c "I appreciate the compliment"
+                        c "Not the intent behind it."
+
+                    "Do you contain all of my limits? Because I think you complete me.":
+                        c "Get to studying"
+
+                    "Do you absorb multiplication from either side? Because I think you're ideal.":
+                        c "Ideally... you would be studying"
+
+                    "are you the non-trivial reduced local homology group of a manifold?":
+                        "Because I'd like you to be on top."
+                        c "I'm going to forget you said that."
+                        c "And there's no way you came up with that."
+
+                "worth a shot"
+                c "No."
+                c "No it was not."
+            
+            "Time to study hard":
+                c "Good plan"
+                #make math here
+                #afterwards math is called again >
+        #right here. this allows the player to do math after a pickup line
+        #and do double math for the other option.
+
         # funny coffee gag
         $ c_score = 3
         return
 
     if c_score == 3:
-        c "Not implemented."
+        show commodore_placeholder
+        with moveinbottom
+        c "Once more before the exam I see?"
+        
+        "You know it"
+        
+        c "I do indeed."
+        
+        "{i}lets get to work!"
+        #mathtime here
+
+        "..."
+
+        "do you find me annoying?"
+
+        c "what makes you say that?"
+
+        "your entire character"
+
+        c "well you are hard to ignore"
+
+        "{i}A real compliment?!"
+
+        c "That was not a compliment"
+
+        "shoot"
+
+        menu:
+            "{i}what now?"
+
+            "You already know!":
+                menu:
+                    c "I can tell whats coming..."
+
+                    "Every prime number 1 mod 4 is a sum of two squares. uhhh... wanna go out for dinner?":
+                        c "ran out of good ones?"
+                        "erm.."
+                        c "If you get to buy me a coffee will you finally leave me alone?"
+                        "I don't know about thaaat.."
+                        c "I'll take free coffee none the less. so long as you pass the exam."
+
+                    "I can't come up with any!":
+                        c "Finally ran out?"
+                        "Sort of."
+                        c "Well im sure you will come up with new ones"
+                        c "And i'm getting tired of this"
+                        c "Will you stop bothering me if you get what you want?"
+                        "Probably!."
+                        c "well if you pass the exam you can buy me coffee. and you will stop."
+                        "OKAY!"
+                        
+                "Score!"
+            
+            "Home stretch!":
+                c "ready for the exam?"
+                "yes sir!"
+                c "good. I can be done with this assignment."
+                "do you want to get coffee after?"
+                c "free coffee? so long as you pass. thats reward enough."
+                "{i}score!"
+
+        c "Good luck"
+        "{i}W.C. turns and leaves"
+        c "finally"
+        c "the pain is over"
+
         $ c_score = 4
         return
 

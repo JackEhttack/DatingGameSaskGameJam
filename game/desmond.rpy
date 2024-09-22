@@ -19,7 +19,7 @@ label desmond:
         d "HAHAHAHAHA!!" #He is laughing/smiling during this
         d "You're all so below me in intelligence" 
         d "You know what just for the hell of it I guess I'll help you."
-        d "What do you need help with"
+        d "What do you need help with?"
         
         #You proceed to do the math game with desmond and if you're right his score goes up else it goes down
 
