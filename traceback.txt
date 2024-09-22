@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 54, in script call
+    call intro
+  File "game/05_ending.rpy", line 87, in script
+    jump v_ending
+ScriptError: could not find label 'v_ending'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 54, in script call
+    call intro
+  File "game/05_ending.rpy", line 87, in script
+    jump v_ending
+  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'v_ending'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.2.24090902
+Counting Cuties 1.0
+Sat Sep 21 18:26:34 2024

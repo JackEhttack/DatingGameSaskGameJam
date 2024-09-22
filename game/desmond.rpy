@@ -12,17 +12,28 @@ label desmond:
         d "My name is Desmond, the smartest person you'll ever meet"
         "Then why are you here?"
         d "You think I'm here to improve my grade?"
-        d "HAHAHAHAHA!!"
-        d "You're all just simple barbarians and morons compared to me"
+        d "HAHAHAHAHA!!" #He is laughing/smiling during this
+        d "You're all just simple barbarians and morons compared to me" 
         d "You know what just for the hell of it I guess I'll help you."
         d "What do you need help with"
         
+        #You proceed to do the math game with desmond and if you're right his score goes up else it goes down
 
         $ d_score = 1
+        d "You're not that dumb kid, although that was a pretty simple question" #Just a neutral face
+        return
+
+    
+        #This is if you fail the minigame
+        $ d_score = 0
         return
 
     if d_score == 1:
-        d "Not implemented."
+        d "Oh, its you again you need help again."
+        d "Sure I guess, here's a vector problem"
+        
+        #You do the math minigame again
+        
         $ d_score = 2
         return
 
