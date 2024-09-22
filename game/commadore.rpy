@@ -90,16 +90,18 @@ label commadore:
         return
 
     if c_score == 2:
+        show commodore_placeholder
+        with moveinbottom
         c "You are very insistant with this arrangement"
         "well.. confidence is key"
         menu:
-        c "It would make my life easier if you weren't so confident."
+            c "It would make my life easier if you weren't so confident."
             "I should definitely try my pickup lines again":
                 c "."
                 c ".."
                 c "..."
                 menu:
-                    C "just get it out of your system."
+                    c "just get it out of your system."
 
                     "Do you satisfy all the sentences of some formal theory? Because you look like a model.":
                         c "I appreciate the compliment"
@@ -132,7 +134,72 @@ label commadore:
         return
 
     if c_score == 3:
-        c "Not implemented."
+        show commodore_placeholder
+        with moveinbottom
+        c "Once more before the exam I see?"
+        
+        "You know it"
+        
+        c "I do indeed."
+        
+        "{i}lets get to work!"
+        #mathtime here
+
+        "..."
+
+        "do you find me annoying?"
+
+        c "what makes you say that?"
+
+        "your entire character"
+
+        c "well you are hard to ignore"
+
+        "{i}A real compliment?!"
+
+        c "That was not a compliment"
+
+        "shoot"
+
+        menu:
+            "{i}what now?"
+
+            "You already know!":
+                menu:
+                    c "I can tell whats coming..."
+
+                    "Every prime number 1 mod 4 is a sum of two squares. uhhh... wanna go out for dinner?":
+                        c "ran out of good ones?"
+                        "erm.."
+                        c "If you get to buy me a coffee will you finally leave me alone?"
+                        "I don't know about thaaat.."
+                        c "I'll take free coffee none the less. so long as you pass the exam."
+
+                    "I can't come up with any!":
+                        c "Finally ran out?"
+                        "Sort of."
+                        c "Well im sure you will come up with new ones"
+                        c "And i'm getting tired of this"
+                        c "Will you stop bothering me if you get what you want?"
+                        "Probably!."
+                        c "well if you pass the exam you can buy me coffee. and you will stop."
+                        "OKAY!"
+                        
+                "Score!"
+            
+            "Home stretch!":
+                c "ready for the exam?"
+                "yes sir!"
+                c "good. I can be done with this assignment."
+                "do you want to get coffee after?"
+                c "free coffee? so long as you pass. thats reward enough."
+                "{i}score!"
+
+        c "Good luck"
+        "{i}W.C. turns and leaves"
+        c "finally"
+        c "the pain is over"
+
         $ c_score = 4
         return
 
