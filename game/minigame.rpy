@@ -1,6 +1,23 @@
 init python:
 
-    import pygame
+    import pygame, math
+
+    def dynamic_bar(st, at, d):
+        if d.resting:
+            return Solid("#5b3bce", xsize=(math.floor(d.BAR_WIDTH*d.sleep_meter)), ysize=d.BAR_HEIGHT), 0
+        return Solid("#481ce9", xsize=(math.floor(d.BAR_WIDTH*d.sleep_meter)), ysize=d.BAR_HEIGHT), 0
+
+    def dynamic_button(st, at, d):
+        if d.focusing:
+            return Solid("#00ff00", xsize=d.BUTTON_SIZE, ysize=d.BUTTON_SIZE), 0
+        return Solid("#ff0000", xsize=d.BUTTON_SIZE, ysize=d.BUTTON_SIZE), 0
+
+    def question_text(st, at, d):
+        return Text(d.question, size=25), 0
+
+    def input_text(st, at, d):
+        return Text(d.text, size=25), 0
+
 
     class MinigameDisplayable(renpy.Displayable):
 
@@ -13,24 +30,35 @@ init python:
             self.answer = answer
 
             # The sizes of some of the images.
-            self.BUTTON_SIZE = 128
+            self.BUTTON_SIZE = 64
             self.BUTTON_BORDER = 16
 
-            self.BAR_WIDTH = 640
-            self.BAR_HEIGHT = 128
+            self.BAR_WIDTH = 480
+            self.BAR_HEIGHT = 64
             self.BAR_BORDER = 16
 
+            self.PUNISHMENT = 0.1
+            self.SLEEP_RECOVERY = 0.5
+
+            self.sleep_meter = 1
+
             # Some displayables we use.
-            self.button = Solid("#ff0000", xsize=self.BUTTON_SIZE, ysize=self.BUTTON_SIZE)
+            self.button = DynamicDisplayable(dynamic_button, self)
             self.button_back = Solid("#888888", xsize=self.BUTTON_SIZE+self.BUTTON_BORDER, ysize=self.BUTTON_SIZE+self.BUTTON_BORDER)
 
-            self.bar = Solid("#ff0000", xsize=self.BAR_WIDTH, ysize=self.BAR_HEIGHT)
+            self.bar = DynamicDisplayable(dynamic_bar, self)
             self.bar_border = Solid("#888888", xsize=self.BAR_WIDTH+self.BAR_BORDER, ysize=self.BAR_HEIGHT+self.BAR_BORDER)
 
-            self.sleep_meter = 100
+            
+            self.qt = DynamicDisplayable(question_text, self)
+            self.tt = DynamicDisplayable(input_text, self)
 
             # The time of the past render-frame.
             self.oldst = None
+            self.modifier = 0.1
+
+            self.focusing = False
+            self.resting = False
 
             # The winner.
             self.result = None
@@ -55,60 +83,37 @@ init python:
             dtime = st - self.oldst
             self.oldst = st
 
-            """
-            # This draws a paddle, and checks for bounces.
-            def paddle(px, py, hotside):
+            self.modifier += dtime / 50
 
-                # Render the paddle image. We give it an 800x600 area
-                # to render into, knowing that images will render smaller.
-                # (This isn't the case with all displayables. Solid, Frame,
-                # and Fixed will expand to fill the space allotted.)
-                # We also pass in st and at.
-                pi = renpy.render(self.paddle, width, height, st, at)
+            if self.resting:
+                self.sleep_meter = min(self.sleep_meter + dtime * self.SLEEP_RECOVERY, 1)
+            self.sleep_meter -= dtime * self.modifier
 
-                # renpy.render returns a Render object, which we can
-                # blit to the Render we're making.
-                r.blit(pi, (int(px), int(py - self.PADDLE_HEIGHT / 2)))
-
-                if py - self.PADDLE_HEIGHT / 2 <= self.by <= py + self.PADDLE_HEIGHT / 2:
-
-                    hit = False
-
-                    if oldbx >= hotside >= self.bx:
-                        self.bx = hotside + (hotside - self.bx)
-                        self.bdx = -self.bdx
-                        hit = True
-
-                    elif oldbx <= hotside <= self.bx:
-                        self.bx = hotside - (self.bx - hotside)
-                        self.bdx = -self.bdx
-                        hit = True
-
-                    if hit:
-                        renpy.sound.play("pong_boop.opus", channel=1)
-                        self.bspeed *= 1.10
-
-            # Draw the two paddles.
-            paddle(self.PADDLE_X, self.playery, self.PADDLE_X + self.PADDLE_WIDTH)
-            paddle(width - self.PADDLE_X - self.PADDLE_WIDTH, self.computery, width - self.PADDLE_X - self.PADDLE_WIDTH)
-
-            # Draw the ball.
-            ball = renpy.render(self.ball, width, height, st, at)
-            r.blit(ball, (int(self.bx - self.BALL_WIDTH / 2),
-                            int(self.by - self.BALL_HEIGHT / 2)))
-
-            # Check for a winner.
-            if self.bx < -50:
-                self.winner = "eileen"
-
-                # Needed to ensure that event is called, noticing
-                # the winner.
+            if self.sleep_meter < 0:
+                self.result = "sleep"
                 renpy.timeout(0)
 
-            elif self.bx > width + 50:
-                self.winner = "player"
-                renpy.timeout(0)
-            """
+            bar_back = renpy.render(self.bar_border, width, height, st, at)
+            r.blit(bar_back, ((width-self.BAR_WIDTH)/2, 875))
+            
+            self.bar.xsize = self.BAR_WIDTH * self.sleep_meter / 100
+
+            bar = renpy.render(self.bar, width, height, st, at)
+            r.blit(bar, ((width-self.BAR_WIDTH+self.BAR_BORDER)/2, 875+self.BAR_BORDER/2))
+            
+            button_back = renpy.render(self.button_back, width, height, st, at)
+            r.blit(button_back, ((width-self.BAR_WIDTH+self.BAR_BORDER)/2-self.BUTTON_SIZE-16-self.BUTTON_BORDER*1.5, height*0.15+12-self.BUTTON_SIZE/2))
+
+            button = renpy.render(self.button, width, height, st, at)
+            r.blit(button, ((width-self.BAR_WIDTH+self.BAR_BORDER)/2-self.BUTTON_SIZE-self.BUTTON_BORDER-16, height*0.15+12-self.BUTTON_SIZE/2+self.BUTTON_BORDER/2))
+            
+            if self.sleep_meter > 0.8 and self.focusing:
+                qt = renpy.render(self.qt, width, height, st, at)
+                r.blit(qt, (width*0.38, height*0.15))
+
+            if self.sleep_meter > 0.25:
+                tt = renpy.render(self.tt, width, height, st, at)
+                r.blit(tt, (width*0.38, height*0.19))
 
             # Ask that we be re-rendered ASAP, so we can show the next
             # frame.
@@ -125,12 +130,26 @@ init python:
             # Mousebutton down == start the game by setting stuck to
             # false.
             if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
-                # Ensure the pong screen updates.
+                if x > (1920-self.BAR_WIDTH)/2 and x < ((1920-self.BAR_WIDTH)/2+self.BAR_WIDTH)+self.BAR_BORDER and y > (875+self.BAR_BORDER/2) and y < (875+self.BAR_BORDER/2) + self.BAR_HEIGHT + self.BAR_BORDER:
+                    self.resting = True
+                if x > (1920-self.BAR_WIDTH+self.BAR_BORDER)/2-self.BUTTON_SIZE-self.BUTTON_BORDER-16 and x < (1920-self.BAR_WIDTH+self.BAR_BORDER)/2-16 and y > 1080*0.15+12-self.BUTTON_SIZE/2+self.BUTTON_BORDER/2 and y < 1080*0.15+12+self.BUTTON_SIZE/2+self.BUTTON_BORDER/2:
+                    self.focusing = True
+                
                 renpy.restart_interaction()
-
+            elif ev.type == pygame.MOUSEBUTTONUP and ev.button == 1:
+                self.resting = False
+                self.focusing = False
+                renpy.restart_interaction()
             if ev.type == pygame.TEXTINPUT:
-                print(ev.text)
+                self.text += ev.text
                 renpy.restart_interaction()
+            if ev.type == pygame.KEYDOWN and ev.key == pygame.K_BACKSPACE:
+                self.text = self.text[0:-1]
+            if ev.type == pygame.KEYDOWN and ev.key == pygame.K_RETURN:
+                if self.text.rstrip() == self.answer:
+                    return "correct"
+                else:
+                    self.modifier += self.PUNISHMENT
 
             # Set the position of the player's paddle.
 
@@ -162,11 +181,11 @@ screen Minigame(question, answer):
         ypos 0.1
         size 40
 
-    text _(question):
-        xpos 0.5
+    text _("Focus"):
+        xpos 0.345
         xanchor 0.5
-        ypos 0.15
-        size 25
+        ypos 0.1
+        size 20
 
     #text _("Eileen"):
     #    xpos (1280 - 240)

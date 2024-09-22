@@ -45,19 +45,26 @@ label commadore:
             "Remain silent.":
                 "{i}You continue studying, letting that intrusive thought escape you.{/i}"
 
-        call screen pong
+        call tutorial
+        call screen Minigame("Question", "Answer")
 
         $ c_score = 2
         return
 
     if c_score == 2:
         c "Not implemented."
+
+        call screen Minigame("Question", "Answer")
+
         # funny coffee gag
         $ c_score = 3
         return
 
     if c_score == 3:
         c "Not implemented."
+
+        call screen Minigame("Question", "Answer")
+
         $ c_score = 4
         return
 

@@ -13,6 +13,8 @@ define k_score = 0
 define d_score = 0
 define c_score = 0
 
+define tutorial = False
+
 image hall = "images/lecture_hall.jpg"
 image outside = "images/outside_school.jpg"
 image study = "images/study_room.jpg"

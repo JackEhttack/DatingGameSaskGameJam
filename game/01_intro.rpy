@@ -38,7 +38,7 @@ label intro:
 
     "{i}I can't believe it. It was only first year math right?{/i}"
     "{i}I tried to study, I really did.{/i}"
-    "{i}But as soon as I glanced the first variable my eyes felt heavy and shortly after sleep took over my body.{/i}"
+    "{i}But as soon as I glanced at the first variable my eyes felt heavy and shortly after sleep took over my body.{/i}"
 
     show failed paper at top
     with moveinbottom

@@ -16,19 +16,28 @@ label v_dialogue:
         "I dabble in heavy metal such as: Slipknot and Iron Maiden"
         v "Sweet, hey I need help with this equation can you help me?"
         
+        call tutorial
+        call screen Minigame("Question", "Answer")
+
         #You proceed to do the math game with v and if you win her score goes up else it goes down
         $ v_score = 1
         return
 
     if v_score == 1:
         v ""
+
+        call screen Minigame("Question", "Answer")
+
         $ v_score = 2
         return
 
     if v_score == 2:
         v ""
+
+        call screen Minigame("Question", "Answer")
+
         $ v_score = 3
         return
 
-label V_ending:
-    v ""
+label v_ending:
+    v "You got my ending... or something."

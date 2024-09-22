@@ -19,6 +19,8 @@ label desmond:
         d "What do you need help with"
         
         #You proceed to do the math game with desmond and if you're right his score goes up else it goes down
+        call tutorial
+        call screen Minigame("Question", "Answer")
 
         $ d_score = 1
         d "You're not that dumb kid, although that was a pretty simple question" #Just a neutral face
@@ -34,12 +36,16 @@ label desmond:
         d "Sure I guess, here's a vector problem"
         
         #You do the math minigame again
+        call screen Minigame("Question", "Answer")
         
         $ d_score = 2
         return
 
     if d_score == 2:
         d "Not implemented."
+
+        call screen Minigame("Question", "Answer")
+
         $ d_score = 3
         return
 

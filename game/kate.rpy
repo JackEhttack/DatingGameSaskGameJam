@@ -11,17 +11,26 @@ label kate:
         "{i}Maybe I can help?{/i}"
         "Hey, do you need any help at all"
         k "Really? I would really appreciate it dweeb"
-        
+
+        call tutorial
+        call screen Minigame("Question", "Answer")
+
         $ k_score = 1
         return
 
     if k_score == 1:
         k ""
+
+        call screen Minigame("Question", "Answer")
+
         $ k_score = 2
         return
 
     if k_score == 2:
         k ""
+
+        call screen Minigame("Question", "Answer")
+
         $ k_score = 3
         return
 
