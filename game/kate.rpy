@@ -28,6 +28,8 @@ label kate:
         return
 
     if k_score == 1:
+        show kate_placeholder at center
+        
         "{i}You walk over to Kate again{/i}"
         k "Oh hi it's you again!"
         "Hey, you need any help again?"
@@ -44,6 +46,8 @@ label kate:
         return
 
     if k_score == 2:
+        show kate_placeholder at center
+        
         k "Hey pointdexter, this stuff is actually starting to make sense"
         "Well that's good"
         k "Hey If we pass this test I challenge you to a 1v1 football game"
@@ -59,6 +63,8 @@ label kate:
         return
 
 label kate_ending:
+    show kate_placeholder at center
+
     "{i}You catch up to Kate outside of the class{/i}"
     "Hey Kate, I passed! Did you?"
     k "I did, you know what that means?"
