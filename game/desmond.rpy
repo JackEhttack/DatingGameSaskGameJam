@@ -1,6 +1,7 @@
 label desmond:
 
-    play music "sfx/desmond_theme.wav"
+    play music "music/commodore_theme.wav"
+    #play music "sfx/desmond_theme.wav"
     
     "{i}You decide to study with Desmond.{/i}"
 

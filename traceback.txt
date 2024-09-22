@@ -1,15 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "game/script.rpy", line 54, in script call
     call intro
   File "game/05_ending.rpy", line 87, in script
     jump v_ending
 ScriptError: could not find label 'v_ending'.
+=======
+  File "game/script.rpy", line 55, in script
+    call screen Minigame("Name it chungy.", "Chungy.")
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/minigame.rpy", line 116, in render
+    renpy.render()
+TypeError: render() takes exactly 5 positional arguments (0 given)
+>>>>>>> de357a0b79cec2846de4a0564dbe582c526d004f
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "game/script.rpy", line 54, in script call
     call intro
   File "game/05_ending.rpy", line 87, in script
@@ -24,3 +35,64 @@ Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
 Sat Sep 21 18:26:34 2024
+=======
+  File "game/script.rpy", line 55, in script
+    call screen Minigame("Name it chungy.", "Chungy.")
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\transition.py", line 194, in render
+    renpy.display.render.render(self.transitions[-1], width, height, 0, 0)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\transition.py", line 384, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\Rais Game Design PC\Desktop\delete me!\renpy\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "game/minigame.rpy", line 116, in render
+    renpy.render()
+  File "render.pyx", line 170, in renpy.display.render.render
+TypeError: render() takes exactly 5 positional arguments (0 given)
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
+Counting Cuties 1.0
+Sat Sep 21 18:21:37 2024
+>>>>>>> de357a0b79cec2846de4a0564dbe582c526d004f

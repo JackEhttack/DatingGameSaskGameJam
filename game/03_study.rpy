@@ -3,9 +3,8 @@ label day2:
     scene hall
     with fade
 
-    "Wowie, that was exceptionally boring.{p=1}Even more so than normal."
-    "Think we were talking about vectors today?"
-    "Guess it's time to go to my mandatory study group."
+    "{i}As soon as I saw down I fell asleep almost immediately."
+    "{i}I don't have the slightest clue what the instructor was talking about."
 
     scene study
     with fade
