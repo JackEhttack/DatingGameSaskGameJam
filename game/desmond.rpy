@@ -6,7 +6,7 @@ label desmond:
     "{i}You decide to study with Desmond.{/i}"
 
     if d_score == 0:
-        show desmond_placeholder at center
+        show desmond normal at center
         d "Heh, come to witness my superior intellect?"
         "Uhh no?"
         "What's your name?"

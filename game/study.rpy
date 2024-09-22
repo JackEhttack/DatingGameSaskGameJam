@@ -15,7 +15,7 @@ label study:
             call kate
 
         "Study with Professor Commodore":
-            call commadore
+            call commodore
 
     if c_score == -1:
         $ c_score = 1

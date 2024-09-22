@@ -1,11 +1,11 @@
-label commadore:
-    # commadore has four relationship score, it increases by two after the first encounter though so it's mostly the same
+label commodore:
+    # commodore has four relationship score, it increases by two after the first encounter though so it's mostly the same
     
     if c_score == 0:
         
         "{i}You decide to study with the Professor.{/i}"
 
-        show commodore_placeholder at right
+        show commodore normal at right
         stop music fadeout 0
         # show jumpscare
         c "No."
@@ -17,7 +17,7 @@ label commadore:
     "{i}You decide to study with the Professor.{/i}"
 
     if c_score == 1:
-        show commodore_placeholder
+        show commodore normal
         with moveinbottom
         c "If you insist."
         "{i}You take a seat next to the Professor and begin quietly going over class material.{/i}"
@@ -29,7 +29,7 @@ label commadore:
             "Ask him?"
 
             "Sure.":
-                "Commadore... are you really a professor?"
+                "commodore... are you really a professor?"
                 stop music
                 c "..."
                 "{i} The rest of the room looks over."
@@ -68,6 +68,6 @@ label commadore:
         $ c_score = 4
         return
 
-label commadore_ending:
+label commodore_ending:
     c "Oh joy, it's my ending."
     # coffee

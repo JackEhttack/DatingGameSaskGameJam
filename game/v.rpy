@@ -5,7 +5,7 @@ label v_dialogue:
     "{i}You decide to study with V.{/i}"
 
     if v_score == 0:
-        show v_placeholder at center
+        show v normal at center
         "{i} She seems uninterested and barely notices you there.{/i}"
         "{i}You decide to just work alongside her silently until you can leave{/i}"
         "{i}As you're working you start to hear heavy metal music playing.{/i}"

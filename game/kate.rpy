@@ -5,7 +5,7 @@ label kate:
     "{i}You decide to study with Kate.{/i}"
 
     if k_score == 0:
-        show kate_placeholder at center
+        show kate normal at center
         k "{b}Why can't I just play football instead{/b}"
         "{i}Huh, she sounds like she is struggling.{/i}"
         "{i}Maybe I can help?{/i}"
@@ -38,4 +38,15 @@ label kate_ending:
     k "You absolute IDIOT, did you really think you get to see MY ending????"
     k "Those puny stupid DEVELOPERS forgot to put it in the GAME."
     k "BWAHAHAHAHAHAHA."
+
+    scene black
+    with fade
+
+    pause 1
+
+    show k end
+    with fade
+
+    pause
+
     return
