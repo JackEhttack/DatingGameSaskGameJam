@@ -20,10 +20,10 @@ label v_dialogue:
             v "CLearly..."
         
             "What's your plan for this session":
-            v "Study quietly, by myself"
+                v "Study quietly, by myself"
         
             "Wanna work together?":
-            v "No thanks."
+                v "No thanks."
         
         "Oh.. ok"
         "{i}V puts on her headphones{/i}"
