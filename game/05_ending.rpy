@@ -83,22 +83,13 @@ label ending_decider:
     if c_score == 4:
         jump commadore_ending
 
-    if v_score > 1:
-        jump v_ending
-
-    if k_score > 1:
-        jump kate_ending
-
-    if d_score > 1:
-        jump desmond_ending
-
     if v_score == 3:
         jump v_ending
 
-    if k_score == 1:
+    if k_score == 3:
         jump kate_ending
 
-    if d_score == 1:
+    if d_score == 3:
         jump desmond_ending
 
     # Congrats, you managed to hit the failsafe ending.
