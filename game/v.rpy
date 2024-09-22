@@ -99,7 +99,7 @@ label v_dialogue:
 
         #You do the math minigame/ the final test and if you succeed you get her ending
         $ v_score = 3
-        jump ending
+        return
 
 label v_ending:
     show v_placeholder at center
@@ -115,4 +115,4 @@ label v_ending:
     scene black
 
     "Congrats on the ending with V."
-
+    return
