@@ -40,19 +40,19 @@ label desmond:
         d "Oh, hey it's you again."
         "{i}He says this and quickly hides something in his binder.{/i}"
         "Hey Desmond what are you doing?"
-        d "Nothing don't worry about it."
-        "Tell me what's going on."
-        d "*SIGHS* Okay I'm having trouble with this problem."
-        "Oh really, let me see if I can solve it."
-        d "Sure give it a shot."
+        d "Nothing don't worry about it"
+        "Tell me what's going on"
+        d "*SIGHS* Okay I'm having trouble with this problem"
+        "Oh really, let me see if I can solve it"
+        d "I doubt YOU could solve this problem."
         
         #You do the math minigame again
         call screen Minigame("Question", "Answer")
         
         $ d_score = 2
         d "Wait what how did you solve that??"
-        "It wasn't super difficult."
-        d "Thanks I guess, see ya later."
+        "It wasn't super difficult"
+        d "It seems I have underestimated your abilities..."
         return
 
     if d_score == 2:
@@ -62,21 +62,25 @@ label desmond:
         "{i}You also notice that most of nalis are painted a bright orange.{/i}"
     
         d "Hey W.C"
-        "Hey Desmond are you ready for the final exam."
-        d "Of couse I am."
-        "Hey Desmond what's going on with your nails."
-        "{i}He looks down at his nails then looks away.{/i}"
-        d "Umm.. that was my sister she did them."
+        "Hey Desmond, are you ready for the final exam?"
+        d "Of COURSE I am."
+        "..."
+        "What's going on with your nails?"
+        "{i}He looks down at his nails then looks away{/i}"
+        d "Umm.. that was my sister... "
+        d "she did them."
         d "She wanted to paint my nails last night, so I let her."
-        "Isn't that nice of you."
-        d "Let's not get off track we need to study for the final exam."
+        "Thats pretty nice of you."
+        d "Hey!"
+        d "Let's not get off track! we need to study for the final exam."
 
         #You do the math minigame with him again
 
         $ d_score = 3
-        d "I think we're finally ready for the test."
-        "I believe so aswell."
-        "Hey Desmond, tell your sister she did a good job."
+        d "I think we're finally ready for the test"
+        "You think so?"
+        d "I said it didn't I?"
+        "Hey Desmond, tell your sister she did a good job"
         d "Uhh.."
         d "I'll relay the message."
         return
