@@ -6,15 +6,18 @@ label v_dialogue:
         show v_placeholder at center
         "{i}You decide to sit next to the gloomy one.{/i}"
         "HI I'm W.C; what's your name?"
+        show v disappointed
         v "V."
         "..."
         "..."
+        show v normal
         "{i}Great Start.{/i}"
         "{i}You pull your heavy textbooks form your bag, letting them fall on the table with a resoudning *THUMP*."
+        show v angry
         "{i}V looks right at you.{/i}"
         v "Was that loud enough for you?"
         "I just wanted to make sure the table knew I meant business."
-        
+        show v normal
         menu:
             v "Clearly..."
         
@@ -39,6 +42,7 @@ label v_dialogue:
                 v "You actually like this music?"
                 "Duh, who doesn't?"
                 v "..."
+                show v happy
                 "{i}V looks pleasantly suprised."
                 
             "Ignore it.":
@@ -50,8 +54,8 @@ label v_dialogue:
         "{i} You make your way over to V.{/i}"
         
         menu:
-            v "You again?"
-        
+            v "You again?" 
+
             "Of course, why so suprised?":
                 v "I just thought that you would run away after the first session."
                 "And miss the story? No way!"
@@ -59,30 +63,39 @@ label v_dialogue:
             "You say that like I'm a bad penny.":
                 v "More like an unfortunate detour."
                 "Hey! Detours can lead to interesting places."
+                show v disappointed
                 v "Or dead ends."
                 "True, but at least they can lead to good stories."
+                show v normal
             
         v "If only math problems had plot."
         "Sure they do! John has 38 watermelons, Jane takes 4."
+        show v disappointed
         v "I meant good stories."
+        show v normal
+        "do you like stories?"
 
         menu:
             v "Depends on the story, what did you have in mind?"
             "Knights and Dragons!":
+                show v disappointed
                 v "Eh.."
                 "Well it's good enough for me."
                 v "That says a lot about you."
                 "Whatever."             
                         
             "Tragic Romance.":
+                show v happy
                 v "Good taste, I like it."
                         
 
     #You do the math minigame here and if you win her score goes uop and you get some dialogue else it goes down and nothing happens
        
         $ v_score = 2
+        show v happy
         v "You might not be a cog in the machine after all."
         "You really really really mean it?"
+        show v normal
         v "Now I'm not so sure."
         return
 
@@ -91,6 +104,7 @@ label v_dialogue:
         "{i}You approach V once again.{/i}"
         "{i}This time they are wearing really cool looking accessories."
         "That looks totally hardcore."
+        show v happy
         v "Really? Thanks."
         v "You are interested in this type of stuff?"
         "Definitely."
@@ -104,7 +118,7 @@ label v_dialogue:
 
 label v_ending:
     show v_placeholder at center
-    
+    show v happy
     "{i}You walk up to V as you both leave the exam hall.{/i}"
     "Hey I passed! What about you?"
     v "Same I passed too."
