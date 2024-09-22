@@ -84,7 +84,7 @@ label ending_decider:
         jump commadore_ending
 
     if v_score > 1:
-        jump V_ending
+        jump v_ending
 
     if k_score > 1:
         jump kate_ending

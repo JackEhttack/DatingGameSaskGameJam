@@ -101,6 +101,5 @@ label v_dialogue:
         $ v_score = 3
         jump ending_decider
 
-label V_ending:
-    if v_score == 3
+label v_ending:
     v ""
