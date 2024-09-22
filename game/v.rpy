@@ -25,7 +25,7 @@ label v_dialogue:
                 v "No thanks."
         
         "Oh.. ok"
-        "{i}V puts on her headphones{/i}"
+        "{i}V puts on their headphones{/i}"
         "{i}Off to a great start W.C {/i}"
  
         #You proceed to do the math game and if you win her score goes up and you get some dialogue else it goes down and you silently leave
@@ -36,13 +36,13 @@ label v_dialogue:
             "Headbang to it":
                 v "What are you doing?"
                 "Rocking out"
-                v "You like this music"
-                "Duh, who doesn't"
+                v "You actually like this music?"
+                "Duh, who doesn't?"
                 v "..."
-                "{i}V looks plesently suprised"
+                "{i}V looks pleasantly suprised"
                 
             "Ignore it":
-                "{i}You decide to ignore the music sneaking out of her headphones and continue studying"              
+                "{i}You decide to ignore the music sneaking out of their headphones and continue studying"              
         return
 
     if v_score == 1:
@@ -50,38 +50,39 @@ label v_dialogue:
         "{i} You make your way over to V{/i}"
         
         menu:
-            v "Oh, you again?"
+            v "You again?"
         
             "Of course, why so suprised?":
                 v "I just thought that you would run away after the first session."
-                "You're going to have to try a little harder to scare me away"
-                v "Noted."
+                "And miss the story? No way!"
 
             "You say that like I'm a bad penny":
                 v "More like an unfortunate detour"
                 "Hey! Detours can lead to interesting places."
                 v "Or dead ends."
                 "True, but at least they can lead to good stories."
-                v "If only math problems had plot."
-                "Do you like stories?"
+            
+        v "If only math problems had plot."
+        "Sure they do! John has 38 watermelons, Jane takes 4."
+        v "I meant good stories."
 
-                menu:
-                    v "Depends on the story, what did you have in mind?"
-                    "Knights and Dragons!":
-                        v "Eh.."
-                        "Well it's good enough for me"
-                        v "That says a lot about you"
-                        "Whatever"             
+        menu:
+            v "Depends on the story, what did you have in mind?"
+            "Knights and Dragons!":
+                v "Eh.."
+                "Well it's good enough for me"
+                v "That says a lot about you"
+                "Whatever"             
                         
-                    "Tragic Romance":
-                        v "Good taste, I like it"
+            "Tragic Romance":
+                v "Good taste, I like it"
                         
 
     #You do the math minigame here and if you win her score goes uop and you get some dialogue else it goes down and nothing happens
        
         $ v_score = 2
         v "You might not be a cog in the machine after all"
-        "You really mean it?"
+        "You really really really mean it?"
         v "Now I'm not so sure"
         return
 
@@ -94,7 +95,7 @@ label v_dialogue:
         v "You are interested in this type of stuff?"
         "Definitely"
         v "Wanna see more? I have lots of stuff like this"
-        "Would I ever"
+        "Would I ever!"
         v "Good, but first we need to pass our tests"
 
         #You do the math minigame/ the final test and if you succeed you get her ending

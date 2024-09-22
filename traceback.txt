@@ -3,24 +3,34 @@
 While running game code:
   File "game/script.rpy", line 56, in script call
     call intro
-  File "game/05_ending.rpy", line 87, in script
-    jump v_ending
-ScriptError: could not find label 'v_ending'.
+  File "game/03_study.rpy", line 14, in script call
+    call study
+  File "game/study.rpy", line 18, in script call
+    call commadore
+  File "game/commadore.rpy", line 104, in script
+    C "just get it out of your system."
+Exception: Sayer 'C' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 56, in script call
     call intro
-  File "game/05_ending.rpy", line 87, in script
-    jump v_ending
-  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\bryce\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'v_ending'.
+  File "game/03_study.rpy", line 14, in script call
+    call study
+  File "game/study.rpy", line 18, in script call
+    call commadore
+  File "game/commadore.rpy", line 104, in script
+    C "just get it out of your system."
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
+    Say.execute(self)
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'C' is not defined.
 
-Windows-10-10.0.22631 AMD64
+Linux-6.5.7-060507-generic-x86_64-with-glibc2.37 x86_64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
-Sun Sep 22 09:12:00 2024
+Sun Sep 22 13:04:22 2024
