@@ -222,5 +222,19 @@ label commodore:
         return
 
 label commodore_ending:
-    c "Oh joy, it's my ending."
+    show commodore happy coffee
+    c "Oh joy, a free fresh cup of coffee..."
+    "enjoying it?"
+    show commodore angry coffee
+    c "oh right..."
+    c "you're still here"
+    show commodore disappointed coffee
+    c "I was under the impression you would be silent"
+    "Yeah but I lied"
+    show commodore normal coffee
+    c "I cant escape..."
+    show commodore happy coffee
+    c "In any case, I thank you for the coffee."
+
+
     # coffee
