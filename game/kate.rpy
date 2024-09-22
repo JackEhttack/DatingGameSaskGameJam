@@ -5,11 +5,12 @@ label kate:
     if k_score == 0:
         show kate_placeholder at center
         "{i}You sit down near a very outgoing athlete.{/i}"
-        
+        show kate disappointed
         k "{b}Why can't I just play football instead.. ugh{/b}"
         "{i}Huh, she sounds like she is struggling.{/i}"
         "{i}Maybe I can help?{/i}"
         "Hey, do you need any help at all?"
+        show kate normal
         k "I guess I could use some help."
         k "My name is Kate."
         "Call me W.C."
@@ -17,6 +18,7 @@ label kate:
         #You do the math minigame with kate and if you succeed her score goes up and you have some dialogue else her score goes down
 
         $ k_score = 1
+        show kate happy
         k "Thanks for the help pointdexter!"
         "Yeah, no worries."
         k "Man I do not like math but I can't wait for the big game after the final exam."
@@ -24,6 +26,7 @@ label kate:
         k "I'm the quarterback of the football team" #She should be happy during this
         "Oh cool, I love football it's definitely my favourite sport"
         "I would have joined the team but."
+        show kate disappointed
         "I'm way too good at it. They wouldn't let me in."
         k "Sure, beanpole. whatever you say."
         "I'll see you tomorrow!" 
@@ -31,8 +34,9 @@ label kate:
 
     if k_score == 1:
         show kate_placeholder at center
-        
+
         "{i}You walk over to Kate again.{/i}"
+        show kate happy
         k "Oh hi it's you again!"
         "Hey, you need any help again?"
         k "Yes please!"
