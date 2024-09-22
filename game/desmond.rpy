@@ -24,12 +24,13 @@ label desmond:
         d "You're not that dumb kid, although that was a pretty simple question" #Just a neutral face
         return
 
-    
+
         #This is if you fail the minigame
         $ d_score = 0
         return
 
     if d_score == 1:
+        show desmond_placeholder at center
         d "Oh, its you again you need help again."
         d "Sure I guess, here's a vector problem"
         
