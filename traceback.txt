@@ -1,36 +1,46 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 56, in script call
+  File "game/script.rpy", line 64, in script call
     call intro
-  File "game/03_study.rpy", line 14, in script call
+  File "game/02_study.rpy", line 29, in script call
     call study
   File "game/study.rpy", line 18, in script call
-    call commadore
-  File "game/commadore.rpy", line 104, in script
-    C "just get it out of your system."
-Exception: Sayer 'C' is not defined.
+    call commodore
+  File "game/commadore.rpy", line 96, in script
+    call screen pong
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Screen pong is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 56, in script call
+  File "game/script.rpy", line 64, in script call
     call intro
-  File "game/03_study.rpy", line 14, in script call
+  File "game/02_study.rpy", line 29, in script call
     call study
   File "game/study.rpy", line 18, in script call
-    call commadore
-  File "game/commadore.rpy", line 104, in script
-    C "just get it out of your system."
-  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
-    Say.execute(self)
-  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'C' is not defined.
+    call commodore
+  File "game/commadore.rpy", line 96, in script
+    call screen pong
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 1974, in execute
+    self.call("execute")
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/exports/statementexports.py", line 331, in call_screen
+    renpy.exports.show_screen(_screen_name, *args, _transient=True, **kwargs)
+  File "/home/jackehttack/gamejam/renpy/renpy-8.3.2-sdk/renpy/display/screen.py", line 1327, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen pong is not known.
+
 
 Linux-6.5.7-060507-generic-x86_64-with-glibc2.37 x86_64
 Ren'Py 8.3.2.24090902
 Counting Cuties 1.0
-Sun Sep 22 13:04:22 2024
+Sun Sep 22 14:39:31 2024
