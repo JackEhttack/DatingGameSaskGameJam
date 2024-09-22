@@ -48,6 +48,7 @@ label kate:
     if k_score == 2:
         show kate_placeholder at center
         
+        "{i}You go sit next to Kate again{/i}"
         k "Hey pointdexter, this stuff is actually starting to make sense"
         "Well that's good"
         k "Hey If we pass this test I challenge you to a 1v1 football game"
