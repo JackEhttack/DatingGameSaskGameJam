@@ -95,14 +95,15 @@ label v_dialogue:
         "Definitely"
         v "Wanna see more? I have lots of stuff like this"
         "Would I ever"
-        v "Good, but we have to pass the test first"
+        v "Good, but first we need to pass our tests"
 
         #You do the math minigame/ the final test and if you succeed you get her ending
         $ v_score = 3
-        jump ending_decider
+        jump ending
 
 label v_ending:
     show v_placeholder at center
+    
     "{i}You walk up to V as you both leave the exam hall{/i}"
     "Hey I passed! What about you?"
     v "Same I passed too"
