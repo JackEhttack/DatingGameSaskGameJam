@@ -3,9 +3,8 @@ label day3:
     scene hall
     with fade
 
-    "Wowie, that was exceptionally boring.{p=1}Even more so than normal."
-    "Think we were talking about polynomials today?"
-    "Guess it's time to go to my mandatory study group."
+    "{i}Last lecture before the final."
+    "{i}The professor is having us play Blahoot for the rest of the period."
 
     scene study
     with fade

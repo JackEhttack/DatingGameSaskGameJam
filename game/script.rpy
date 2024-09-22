@@ -51,6 +51,8 @@ transform flip:
 
 label start:
 
+    # scene outside_school
+    # call screen Minigame("Name it chungy.", "Chungy.")
     call intro
 
     # put a thank you for playing our game here

@@ -1,6 +1,7 @@
 label desmond:
 
-    play music "sfx/desmond_theme.wav"
+    play music "music/commodore_theme.wav"
+    #play music "sfx/desmond_theme.wav"
     
     "{i}You decide to study with Desmond.{/i}"
 
@@ -13,7 +14,6 @@ label desmond:
         "Then why are you here?"
         d "You think I'm here to improve my grade?"
         d "HAHAHAHAHA!!"
-        
 
         $ d_score = 1
         return
