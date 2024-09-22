@@ -78,6 +78,7 @@ label v_dialogue:
                         "Whatever"                        
 
     #You do the math minigame here and if you win her score goes uop and you get some dialogue else it goes down and nothing happens
+       
         $ v_score = 2
         v "You might not be a cog in the machine after all"
         "You really mean it?"
@@ -101,4 +102,16 @@ label v_dialogue:
         jump ending_decider
 
 label v_ending:
-    v ""
+    show v_placeholder at center
+    "{i}You walk up to V as you both leave the exam hall{/i}"
+    "Hey I passed! What about you?"
+    v "Same I passed too"
+    v "So, what are you doing after this?"
+    "Oh, I was proabably going back to my dorm. What about you?"
+    v "Oh nothing, I was just wondering if you wanted to come back to my dorm and chill and listen to heavy metal"
+    "Yeah of course, let's go!"
+
+    scene black
+
+    "Congrats on the ending with V."
+
