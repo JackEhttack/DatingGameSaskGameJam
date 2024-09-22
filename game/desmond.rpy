@@ -6,15 +6,18 @@ label desmond:
     "{i}You decide to study with Desmond.{/i}"
 
     if d_score == 0:
-        show desmond normal at center
+        show desmond_placeholder at center
+
+        "{i}You decide to study with Desmond.{/i}"
+        
         d "Heh, come to witness my superior intellect?"
         "Uhh no?"
         "What's your name?"
-        d "My name is Desmond, the smartest person you'll ever meet"
-        "Then why are you here?"
+        d "My name is Desmond, the smartest person in the room"
+        "I'm W.C but then why are you here?"
         d "You think I'm here to improve my grade?"
         d "HAHAHAHAHA!!" #He is laughing/smiling during this
-        d "You're all just simple barbarians and morons compared to me" 
+        d "You're all so below me in intelligence" 
         d "You know what just for the hell of it I guess I'll help you."
         d "What do you need help with"
         
@@ -23,33 +26,68 @@ label desmond:
         call screen Minigame("Question", "Answer")
 
         $ d_score = 1
-        d "You're not that dumb kid, although that was a pretty simple question" #Just a neutral face
-        return
-
-    
-        #This is if you fail the minigame
-        $ d_score = 0
+        d "Heh, not bad kid you did alright" #Just a neutral face
+        d "But still beneath me in intelligence"
+        "Umm.. thanks for the compliment"
+        "I guess I'll see you tommorrow"
         return
 
     if d_score == 1:
-        d "Oh, its you again you need help again."
-        d "Sure I guess, here's a vector problem"
+        show desmond_placeholder at center
+        
+        "{i}You walk over to Desmond again{/i}"
+
+        d "Oh, hey it's you again."
+        "{i}He says this and quickly hides something in his binder{/i}"
+        "Hey Desmond what are you doing?"
+        d "Nothing don't worry about it"
+        "Tell me what's going on"
+        d "*SIGHS* Okay I'm having trouble with this problem"
+        "Oh really, let me see if I can solve it"
+        d "Sure give it a shot"
         
         #You do the math minigame again
         call screen Minigame("Question", "Answer")
         
         $ d_score = 2
+        d "Wait what how did you solve that??"
+        "It wasn't super difficult"
+        d "Thanks I guess, see ya later"
         return
 
     if d_score == 2:
-        d "Not implemented."
+        show desmond_placeholder at center
 
-        call screen Minigame("Question", "Answer")
+        "{i}You sit down next to Desmond again{/i}"
+        "{i}You also notice that most of nalis are painted a bright orange{/i}"
+    
+        d "Hey W.C"
+        "Hey Desmond are you ready for the final exam."
+        d "Of couse I am."
+        "Hey desmond what's going on with your nails."
+        "{i}He looks down at his nails then looks away{/i}"
+        d "Umm.. that was my sister she did them."
+        d "She wanted to paint my nails last night, so I let her."
+        "Isn't that nice of you."
+        d "Let's not get off track we need to study for the final exam."
+
+        #You do the math minigame with him again
 
         $ d_score = 3
+        d "I think we're finally ready for the test"
+        "I believe so aswell"
+        "Hey Desmond, tell your sister she did a good job"
+        d "Uhh.."
+        d "I'll relay the message"
         return
 
 label desmond_ending:
-    d "Umm actually, it's my ending."
-    # classroom
+    show desmond_placeholder at center
+    "{i}Desmond and you seem to be the last people to leave the exam hall{/i}"
+
+    "Hey Desmond I passed! What about you"
+    d "Is that even a question?"
+
+    "{i}He pushes his glasses upwards as they shine from their glint{/i}"
+    "{i}He slams his paper on a table to show a grade better than yours{/i}"
     
