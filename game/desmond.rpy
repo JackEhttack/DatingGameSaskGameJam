@@ -90,4 +90,6 @@ label desmond_ending:
 
     "{i}He pushes his glasses upwards as they shine from their glint{/i}"
     "{i}He slams his paper on a table to show a grade better than yours{/i}"
-    
+
+    "Yeah that's not suprising"
+    return
