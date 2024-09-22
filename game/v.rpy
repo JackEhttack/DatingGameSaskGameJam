@@ -2,22 +2,21 @@ label v_dialogue:
 
     play music "music/v_theme.wav"
 
-    "{i}You decide to si nect to the gloomy one.{/i}"
-
     if v_score == 0:
         show v_placeholder at center
+        "{i}You decide to sit next to the gloomy one.{/i}"
         "HI I'm W.C; what's your name?"
         v "V."
         "..."
         "..."
         "{i}Great Start{/i}"
-        "{i}You pull your heavy textbooks form your bag, etting them fall on the table with a resoudning THUMP"
+        "{i}You pull your heavy textbooks form your bag, letting them fall on the table with a resoudning *THUMP*"
         "{i}V looks right at you{/i}"
         v "Was that loud enough for you?"
-        "I just wanted to make sure the table knew I meant business"
+        "I just wanted to make sure the table knew I meant business."
         
         menu:
-            v "CLearly..."
+            v "Clearly..."
         
             "What's your plan for this session":
                 v "Study quietly, by myself"
@@ -80,7 +79,7 @@ label v_dialogue:
 
     #You do the math minigame here and if you win her score goes uop and you get some dialogue else it goes down and nothing happens
         $ v_score = 2
-        v "You might not be a cog in the amchine after all"
+        v "You might not be a cog in the machine after all"
         "You really mean it?"
         v "Now I'm not so sure"
         return
@@ -88,12 +87,12 @@ label v_dialogue:
     if v_score == 2:
         show v_placeholder at center
         "{i}You approach V once again.{/i}"
-        "{i}This time they are wearing rally cool looking accessories"
+        "{i}This time they are wearing really cool looking accessories"
         "That looks totally hardcore"
         v "Really? Thanks."
-        v "You are inbterested in this type of stuff?"
+        v "You are interested in this type of stuff?"
         "Definitely"
-        v "Wanna see more? I hav elots of stuff like this"
+        v "Wanna see more? I have lots of stuff like this"
         "Would I ever"
         v "Good, but we have to pass the test first"
 
