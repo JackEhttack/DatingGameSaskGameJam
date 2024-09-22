@@ -44,14 +44,53 @@ label commadore:
 
             "Remain silent.":
                 "{i}You continue studying, letting that intrusive thought escape you.{/i}"
+                c "Is there something on my monitor?"
+                "Oh uh, sorry?"
+                c "You were staring at me."
+                c "And yes, I am a professor."
+                "{i}phew"
 
+        #mathtime
+        
+        menu:
+            "{i}what now?"
+            
+            "{i}I should flirt with him now":
+                menu:
+                    "{i}The time is now"
+
+                    "How about some multiplication between you and I?":
+                        c "subtract yourself from my presence"
+
+                    "I feel like we could manage some integration later.":
+                        c "what kind of integration?"
+                        "the type with undefined limits"
+                        c "No."
+
+                    "on a scale of 1-10 I'd rate you an 'i' because you're unreal":
+                        c "and I wish you were only imaginary"
+
+                    "Are you category theory? because I dont get you at all":
+                        c "Neither do I"
+                        c "Now do your math"
+
+                "{i}Worth a shot."
+
+            "{i}I should study.":
+                c "yes you should."
+                "did he just read my mind?"
+        
+        "time for study i guess."
+        
+        #mathtime
+        
         call screen pong
 
         $ c_score = 2
         return
 
     if c_score == 2:
-        c "Not implemented."
+        c "You are very insistant with this arrangement"
         # funny coffee gag
         $ c_score = 3
         return
