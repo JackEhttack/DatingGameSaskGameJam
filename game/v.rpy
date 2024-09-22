@@ -50,11 +50,11 @@ label v_dialogue:
         "{i} You make your way over to V{/i}"
         
         menu:
-            v "Oh you again?"
+            v "Oh, you again?"
         
             "Of course, why so suprised?":
                 v "I just thought that you would run away after the first session."
-                "You're going to try a little harder to scare me away"
+                "You're going to have to try a little harder to scare me away"
                 v "Noted."
 
             "You say that like I'm a bad penny":
@@ -62,20 +62,20 @@ label v_dialogue:
                 "Hey! Detours can lead to interesting places."
                 v "Or dead ends."
                 "True, but at least they can lead to good stories."
-                v "If only math problems had plot"
-                "Do you like stories."
+                v "If only math problems had plot."
+                "Do you like stories?"
 
                 menu:
                     v "Depends on the story, what did you have in mind?"
-
                     "Knights and Dragons!":
                         v "Eh.."
-
-                    "Tragic Romance":
-                        v "Good taste, I like it"
                         "Well it's good enough for me"
                         v "That says a lot about you"
-                        "Whatever"                        
+                        "Whatever"             
+                        
+                    "Tragic Romance":
+                        v "Good taste, I like it"
+                        
 
     #You do the math minigame here and if you win her score goes uop and you get some dialogue else it goes down and nothing happens
        
